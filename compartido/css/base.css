@@ -1,0 +1,246 @@
+/* =====================================
+   base.css — Proyecto Mera
+   Estilos globales reutilizables:
+   reset, tipografía, tablas, listas,
+   formularios, botones, bloques de código
+   y cajas de sección.
+   ===================================== */
+
+/* Reset global */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #080c14;
+    color: #e2e8f0;
+}
+
+
+/* ================================
+   TIPOGRAFÍA
+   ================================ */
+
+h2 {
+    color: #38bdf8;
+    border-bottom: 3px solid #FFD200;
+    padding-bottom: 5px;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    color: #FFD200;
+    margin-top: 1.2rem;
+}
+
+h4 {
+    color: #38bdf8;
+    margin-bottom: 4px;
+}
+
+p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   LISTAS
+   ================================ */
+
+ul {
+    margin-left: 20px;
+    color: #94a3b8;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   TABLAS
+   ================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9em;
+}
+
+table th {
+    background-color: #0B3D91;
+    color: #FFD200;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #FFD200;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #1e293b;
+    color: #94a3b8;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ================================
+   SECCIONES DESTACADAS
+   ================================ */
+
+.section-box {
+    background-color: #0B3D91;
+    border-left: 6px solid #FFD200;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.section-box p,
+.section-box li {
+    color: #e2e8f0;
+}
+
+
+/* ================================
+   BLOQUES DE CÓDIGO
+   ================================ */
+
+pre {
+    background-color: #040709;
+    border-left: 4px solid #38bdf8;
+    border-radius: 6px;
+    padding: 14px;
+    color: #7dd3fc;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+
+/* ================================
+   FORMULARIOS
+   ================================ */
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #94a3b8;
+    font-size: 0.88em;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #1e3a5f;
+    background-color: #040709;
+    color: #e2e8f0;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+}
+
+
+/* ================================
+   BOTONES
+   ================================ */
+
+button {
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #0B3D91;
+    color: #FFD200;
+    border: 1px solid #FFD200;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #072F6B;
+}
+
+
+/* ================================
+   ENLACES GENERALES
+   ================================ */
+
+a {
+    color: #38bdf8;
+}
+
+a:hover {
+    color: #FFD200;
+}
+
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+
+main {
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #0e1521;
+    min-height: 60vh;
+}
+
+
+/* ================================
+   NAVEGACIÓN ENTRE PÁGINAS
+   ================================ */
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1e293b;
+}
+
+.btn-nav {
+    color: #FFD200;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.88em;
+    padding: 6px 14px;
+    border: 1px solid #FFD200;
+    border-radius: 6px;
+    background-color: #0A357A;
+    transition: background-color 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: #072F6B;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* ================================
+   MENSAJES DEL SISTEMA
+   ================================ */
+
+#info {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #94a3b8;
+    min-height: 20px;
+}
+
+#info.ok  { color: #34d399; }
+#info.err { color: #f87171; }

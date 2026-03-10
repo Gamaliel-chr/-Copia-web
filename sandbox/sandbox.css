@@ -1,0 +1,31 @@
+/* =====================================
+   sandbox.css — Proyecto Mera
+   Estilos exclusivos del sandbox XSS:
+   área de salida, iframe y botones.
+   ===================================== */
+
+#out {
+    background-color: #040709;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 12px;
+    min-height: 40px;
+    color: #e2e8f0;
+}
+
+#sandbox-frame {
+    width: 100%;
+    height: 220px;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    background-color: #040709;
+    margin-top: 10px;
+}
+
+.flex-gap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}

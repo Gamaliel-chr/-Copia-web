@@ -1,0 +1,89 @@
+/* =====================================
+   inicio.css — Proyecto Mera
+   Estilos exclusivos de la página de inicio:
+   hero de bienvenida y grid de tarjetas.
+   ===================================== */
+
+/* Caja principal de bienvenida */
+.hero-content {
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    background-color: #0B3D91;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    margin: 0 0 8px;
+    font-size: 1.8em;
+}
+
+.hero-content .hero-subtitle {
+    color: #94a3b8;
+    margin: 0 0 6px;
+}
+
+.hero-content .hero-course {
+    color: #FFD200;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Grid de tarjetas de temas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.topic-card {
+    background-color: #0e1521;
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.topic-card:hover {
+    border-color: #FFD200;
+    transform: translateY(-3px);
+}
+
+.card-num {
+    font-size: 0.72em;
+    color: #64748b;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.topic-card h3 {
+    color: #a78bfa;
+    margin: 0 0 6px;
+    font-size: 1em;
+    border-bottom: none;
+}
+
+.topic-card p {
+    font-size: 0.85em;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Fila de dos tarjetas */
+.cards-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}

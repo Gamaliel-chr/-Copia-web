@@ -1,0 +1,92 @@
+/* styles.css - paleta y layout pensado para estudiantes de Ingeniería/TI */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg-100: #f6fbff;
+    --card: #ffffff;
+    --accent: #0ea5a4;
+    --accent-2: #2563eb;
+    --text: #0f172a;
+    --muted: #64748b;
+}
+
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:'Inter',system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,var(--bg-100),#eef6ff);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:1.5rem;
+}
+
+.site-header{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:0.6rem}
+.brand-logo{width:40px;height:40px;object-fit:contain;border-radius:8px}
+.brand-name{font-weight:700;color:var(--accent-2)}
+.brand-link{display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit}
+
+.hamburger{background:none;border:0;font-size:1.4rem;cursor:pointer;padding:0.4rem;border-radius:8px}
+.hamburger:focus{outline:2px solid rgba(37,99,235,0.2)}
+.hamburger:focus-visible{outline:3px solid rgba(37,99,235,0.18)}
+
+.nav{position:relative}
+.nav-list{display:flex;gap:0.6rem;list-style:none;padding:0;margin:0}
+.nav-list a{display:inline-block;padding:0.45rem 0.8rem;border-radius:999px;text-decoration:none;color:var(--accent-2);background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(14,165,164,0.02));font-weight:600}
+.nav-list a:focus{outline:2px solid rgba(37,99,235,0.12);outline-offset:2px}
+.nav-list a:hover{filter:brightness(0.96)}
+
+/* layout principal */
+main#app{width:100%;max-width:900px;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 28px rgba(15,23,42,0.06)}
+h1,h2{margin:0 0 0.6rem 0}
+
+/* footer */
+.site-footer{width:100%;max-width:900px;margin-top:2rem;color:var(--muted)}
+
+/* responsive: convertir nav en overlay en móviles */
+@media (max-width:800px){
+    .nav-list{
+        position:fixed;
+        top:64px;
+        right:0;
+        flex-direction:column;
+        background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,249,255,0.98));
+        padding:1rem;
+        border-radius:8px 0 0 8px;
+        box-shadow:0 10px 30px rgba(15,23,42,0.08);
+        transform:translateX(12%); /* dejar una pequeña distancia para que no quede totalmente fuera */
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none; /* evita foco/tab cuando está cerrado */
+        transition:transform 240ms ease, opacity 240ms ease;
+        z-index:9999; /* asegurar que esté encima */
+        min-width:220px;
+    }
+    /* al aplicar la clase `open` sobre el nav (ej: <nav class="nav open">) se abre el panel */
+    .nav.open .nav-list{transform:translateX(0);opacity:1;visibility:visible;pointer-events:auto}
+    .site-header{align-items:center}
+}
+
+/* Respectar preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce){
+  .nav-list, .nav.open .nav-list, .nav-list a { transition: none !important; }
+}
+
+/* utilidades */
+.center{text-align:center}
+.muted{color:var(--muted)}
+label{display:block;margin-top:0.6rem;margin-bottom:0.25rem;font-weight:600}
+input,textarea,button{font-family:inherit}
+button{cursor:pointer}

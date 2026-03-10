@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad — Proyecto Meta TI</title>
+    <!-- CSS compartidos -->
+    <link rel="stylesheet" href="../compartido/css/base.css">
+    <link rel="stylesheet" href="../compartido/css/header.css">
+    <link rel="stylesheet" href="../compartido/css/footer.css">
+    <link rel="stylesheet" href="../compartido/css/responsive.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">&lt;/&gt;</div>
+        <div>
+            <h1>Proyecto<span>Meta</span></h1>
+            <p>ITI-421 Web I — Público Meta TI</p>
+        </div>
+    </div>
+    <button id="btnMenu" class="hamburger" aria-expanded="false" aria-label="Abrir menú">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+    </button>
+</header>
+
+<nav>
+    <a href="../auth/login.html">Inicio sesión</a>
+    <a href="../inicio/inicio.html">Inicio</a>
+    <a href="../fundamentos/fundamentos.html">Fundamentos</a>
+    <a href="../diseno/diseno.html">Diseño</a>
+    <a href="../seguridad/seguridad.html" class="active">Seguridad</a>
+    <a href="../talleres/talleres.html">Talleres</a>
+    <a href="../sandbox/sandbox.html">Sandbox</a>
+</nav>
+
+<main>
+
+    <h2>Seguridad en Sitios Web</h2>
+
+    <p>
+        La seguridad web protege la información de los usuarios y evita ataques
+        informáticos que puedan comprometer datos confidenciales.
+    </p>
+
+    <h3>Certificados SSL</h3>
+
+    <p>
+        Los certificados SSL permiten cifrar la comunicación entre el navegador
+        y el servidor utilizando HTTPS.
+    </p>
+
+    <h3>Vulnerabilidades comunes</h3>
+
+    <div class="section-box">
+        <h4>SQL Injection</h4>
+        <p>
+            Ataque que permite manipular consultas SQL para acceder
+            a información de la base de datos.
+        </p>
+        <h4>Cross Site Scripting (XSS)</h4>
+        <p>
+            Permite insertar scripts maliciosos que se ejecutan
+            en el navegador de otros usuarios.
+        </p>
+    </div>
+
+    <h3>Demo: Validación segura</h3>
+
+    <p>Ingresa los datos. La validación y el almacenamiento se manejan desde <b>seguridad.js</b>.</p>
+
+    <label for="email">Correo institucional</label>
+    <input type="email" id="email" placeholder="usuario@est.utn.ac.cr">
+
+    <label for="pw">Contraseña</label>
+    <input type="password" id="pw" placeholder="Mínimo 8 caracteres, mayúscula, número y símbolo">
+
+    <button type="button" id="btnGuardar">Guardar (demo)</button>
+
+    <p id="info"></p>
+
+    <h3>Buenas prácticas</h3>
+
+    <div class="section-box">
+        <ul>
+            <li>Usar HTTPS en todo el sitio.</li>
+            <li>Validar y sanitizar datos de entrada.</li>
+            <li>Usar contraseñas seguras y únicas.</li>
+            <li>Mantener el software actualizado.</li>
+            <li>Realizar copias de seguridad periódicas.</li>
+        </ul>
+    </div>
+
+    <div class="page-nav">
+        <a href="../diseno/diseno.html" class="btn-nav">&larr; Diseño</a>
+        <a href="../talleres/talleres.html" class="btn-nav">Talleres &rarr;</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; <span class="year"></span> — Demo educativo para estudiantes de Ingeniería en TI</p>
+</footer>
+
+<!-- JS compartidos -->
+<script src="../compartido/js/menu.js" defer></script>
+<script src="../compartido/js/footer-year.js" defer></script>
+<!-- JS de auth (protección de sesión) -->
+<script src="../auth/login.js" defer></script>
+<!-- JS de este módulo -->
+<script src="seguridad.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox — Proyecto Meta TI</title>
+    <link rel="stylesheet" href="../Styles/css.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">&lt;/&gt;</div>
+        <div>
+            <h1>Proyecto<span>Meta</span></h1>
+            <p>ITI-421 Web I — Público Meta TI</p>
+        </div>
+    </div>
+    <button id="btnMenu" class="hamburger" aria-expanded="false" aria-label="Abrir menú">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+    </button>
+</header>
+
+<nav>
+    <a href="cls-login.html">Inicio secion</a>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="cls-fundamentos.html">Fundamentos</a>
+    <a href="cls-diseño.html">Diseño</a>
+    <a href="cls-seguridad.html">Seguridad</a>
+    <a href="cls-talleres.html">Talleres</a>
+    <a href="cls-sandbox.html">Sandbox</a>
+</nav>
+
+<main>
+
+    <h2>Sandbox / XSS demo</h2>
+
+    <p>
+        Un sandbox es un entorno seguro donde los estudiantes pueden experimentar
+        con código sin afectar sistemas reales.
+    </p>
+
+    <p>
+        Compara insertar HTML sin filtrar <b>(inseguro)</b> vs escapar el contenido
+        <b>(seguro)</b> o cargarlo en un iframe aislado.
+    </p>
+
+    <label for="xss">Ingresa HTML o JS para la demo</label>
+    <textarea id="xss" rows="4" placeholder="Ejemplo: &lt;b&gt;Hola&lt;/b&gt; o &lt;script&gt;alert('xss')&lt;/script&gt;"></textarea>
+
+    <div class="flex-gap">
+        <button type="button" id="btnUnsafe">Mostrar (inseguro)</button>
+        <button type="button" id="btnSafe">Mostrar (seguro)</button>
+        <button type="button" id="btnIframe">Cargar en iframe</button>
+    </div>
+
+    <div id="out"></div>
+
+    <iframe id="sandbox-frame" sandbox="allow-scripts" title="Sandbox iframe aislado"></iframe>
+
+    <div class="page-nav">
+        <a href="cls-talleres.html" class="btn-nav">&larr; Talleres</a>
+        <a href="index.html" class="btn-nav">Inicio &rarr;</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; <span class="year"></span> — Demo educativo para estudiantes de Ingeniería en TI</p>
+</footer>
+
+<script src="../JS/app.js" defer></script>
+<script src="../JS/login.js" defer></script>
+</body>
+</html>

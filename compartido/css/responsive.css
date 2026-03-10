@@ -1,0 +1,45 @@
+/* =====================================
+   responsive.css — Proyecto Mera
+   Media queries para adaptar el sitio
+   a tablets y celulares.
+   ===================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 780px) {
+
+    /* Aparece el botón hamburguesa */
+    .hamburger { display: flex; }
+
+    /* El menú se oculta por defecto */
+    nav {
+        display: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* Cuando JS agrega la clase open se muestra */
+    nav.open {
+        display: block;
+    }
+
+    /* Enlaces del menú en formato vertical */
+    nav a {
+        display: block;
+        padding: 10px 24px;
+        margin: 0;
+        border-bottom: 1px solid #0B3D91;
+    }
+
+    /* Grid de tarjetas pasa de 3 a 2 columnas */
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Fila secundaria a una columna */
+    .cards-row-2 { grid-template-columns: 1fr; }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    /* Tarjetas en una sola columna */
+    .cards-grid { grid-template-columns: 1fr; }
+}

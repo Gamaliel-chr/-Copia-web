@@ -1,0 +1,17 @@
+/* =====================================
+   footer.css — Proyecto Mera
+   Estilos del pie de página.
+   ===================================== */
+
+footer {
+    background-color: #072F6B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}

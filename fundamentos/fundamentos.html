@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos — Proyecto Meta TI</title>
+    <!-- CSS compartidos -->
+    <link rel="stylesheet" href="../compartido/css/base.css">
+    <link rel="stylesheet" href="../compartido/css/header.css">
+    <link rel="stylesheet" href="../compartido/css/footer.css">
+    <link rel="stylesheet" href="../compartido/css/responsive.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">&lt;/&gt;</div>
+        <div>
+            <h1>Proyecto<span>Meta</span></h1>
+            <p>ITI-421 Web I — Público Meta TI</p>
+        </div>
+    </div>
+    <button id="btnMenu" class="hamburger" aria-expanded="false" aria-label="Abrir menú">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+    </button>
+</header>
+
+<nav>
+    <a href="../auth/login.html">Inicio sesión</a>
+    <a href="../inicio/inicio.html">Inicio</a>
+    <a href="../fundamentos/fundamentos.html" class="active">Fundamentos</a>
+    <a href="../diseno/diseno.html">Diseño</a>
+    <a href="../seguridad/seguridad.html">Seguridad</a>
+    <a href="../talleres/talleres.html">Talleres</a>
+    <a href="../sandbox/sandbox.html">Sandbox</a>
+</nav>
+
+<main>
+
+    <h2>Fundamentos de Internet</h2>
+
+    <p>
+        Internet es una red global de computadoras interconectadas que utilizan
+        protocolos estandarizados para intercambiar información.
+    </p>
+
+    <h3>Diferencia entre Internet y la Web</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Internet</th>
+            <th>World Wide Web</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Infraestructura global de redes.</td>
+            <td>Sistema de páginas web accesibles mediante navegadores.</td>
+        </tr>
+        <tr>
+            <td>Incluye servicios como correo electrónico y FTP.</td>
+            <td>Permite visualizar sitios web.</td>
+        </tr>
+        <tr>
+            <td>Funciona con TCP/IP.</td>
+            <td>Funciona principalmente con HTTP y HTTPS.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Arquitectura Cliente - Servidor</h3>
+
+    <p>La mayoría de los sistemas web funcionan utilizando el modelo cliente-servidor.</p>
+
+    <pre>
+Usuario
+  |
+Navegador
+  |
+Solicitud HTTP
+  |
+Servidor Web
+  |
+Base de Datos
+    </pre>
+
+    <h3>Protocolos de Internet</h3>
+
+    <div class="section-box">
+        <ul>
+            <li><b>HTTP</b> — protocolo que permite transferir páginas web.</li>
+            <li><b>HTTPS</b> — versión segura de HTTP que cifra la información.</li>
+            <li><b>FTP</b> — utilizado para transferir archivos.</li>
+            <li><b>DNS</b> — traduce nombres de dominio a direcciones IP.</li>
+            <li><b>TCP/IP</b> — conjunto de protocolos base de Internet.</li>
+        </ul>
+    </div>
+
+    <div class="page-nav">
+        <a href="../inicio/inicio.html" class="btn-nav">&larr; Inicio</a>
+        <a href="../diseno/diseno.html" class="btn-nav">Diseño Web &rarr;</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; <span class="year"></span> — Demo educativo para estudiantes de Ingeniería en TI</p>
+</footer>
+
+<!-- JS compartidos -->
+<script src="../compartido/js/menu.js" defer></script>
+<script src="../compartido/js/footer-year.js" defer></script>
+<!-- JS de auth (protección de sesión) -->
+<script src="../auth/login.js" defer></script>
+
+</body>
+</html>

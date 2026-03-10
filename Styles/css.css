@@ -1,0 +1,640 @@
+/* =====================================
+   styles.css — Proyecto Meta
+
+   Aquí defino todo el estilo visual del sitio:
+   colores, menú, tarjetas, formularios,
+   navegación entre páginas y versión responsive.
+   ===================================== */
+
+
+/* ================================
+   ESTILO BASE DEL SITIO
+   ================================ */
+
+/* Quita el margen por defecto del navegador
+   y define la fuente general del sitio.
+   También se define el fondo oscuro y el
+   color principal del texto. */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #080c14;
+    color: #e2e8f0;
+}
+
+
+/* ================================
+   ENCABEZADO (HEADER)
+   ================================ */
+
+/* Estilo general del encabezado.
+   Aquí se coloca el logo, nombre del sitio
+   y el menú de navegación. */
+header {
+    background-color: #072F6B;
+    color: #FFFFFF;
+    padding: 16px 24px;
+
+    /* flex se usa para acomodar los elementos
+       horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* permite que el contenido baje de línea
+       si la pantalla es pequeña */
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    /* hace que el header quede fijo arriba
+       cuando se hace scroll */
+    position: sticky;
+    top: 0;
+
+    /* asegura que quede por encima
+       de otros elementos */
+    z-index: 100;
+}
+
+/* Contenedor del logo y nombre del sitio */
+header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icono del logo */
+header .brand-icon {
+    background-color: #0B3D91;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    font-weight: bold;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+/* Título principal del sitio */
+header h1 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+/* Parte resaltada del título */
+header h1 span {
+    color: #38bdf8;
+}
+
+/* Texto pequeño debajo del título */
+header p {
+    margin: 0;
+    color: #FFD200;
+    font-size: 0.85em;
+}
+
+
+/* ================================
+   MENÚ DE NAVEGACIÓN
+   ================================ */
+
+/* Contenedor del menú */
+nav {
+    background-color: #0A357A;
+    padding: 10px 24px;
+    text-align: center;
+}
+
+/* Estilo de los enlaces del menú */
+nav a {
+    color: #FFD200;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Efecto cuando se pasa el mouse
+   o cuando el enlace está activo */
+nav a:hover,
+nav a.active {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+
+/* ================================
+   BOTÓN HAMBURGUESA
+   ================================ */
+
+/* Botón que aparece en pantallas pequeñas
+   para mostrar u ocultar el menú */
+.hamburger {
+    display: none;
+    background: none;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+
+    /* organiza las tres líneas del botón */
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Cada línea del botón hamburguesa */
+.ham-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #38bdf8;
+    border-radius: 2px;
+
+    /* pequeña animación cuando cambia de estado */
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Animación cuando el menú está abierto */
+.hamburger[aria-expanded="true"] .ham-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .ham-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .ham-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+
+/* Contenedor principal del contenido */
+main {
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    /* fondo ligeramente diferente para separar
+       el contenido del fondo general */
+    background-color: #0e1521;
+
+    min-height: 60vh;
+}
+
+
+/* ================================
+   TIPOGRAFÍA
+   ================================ */
+
+/* Títulos de sección */
+h2 {
+    color: #38bdf8;
+
+    /* línea decorativa debajo del título */
+    border-bottom: 3px solid #FFD200;
+
+    padding-bottom: 5px;
+    margin-top: 1.5rem;
+}
+
+/* Subtítulos */
+h3 {
+    color: #FFD200;
+    margin-top: 1.2rem;
+}
+
+/* Títulos más pequeños */
+h4 {
+    color: #38bdf8;
+    margin-bottom: 4px;
+}
+
+/* Párrafos */
+p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   LISTAS
+   ================================ */
+
+ul {
+    margin-left: 20px;
+    color: #94a3b8;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   TABLAS
+   ================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9em;
+}
+
+/* Encabezado de la tabla */
+table th {
+    background-color: #0B3D91;
+    color: #FFD200;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #FFD200;
+}
+
+/* Celdas de la tabla */
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #1e293b;
+    color: #94a3b8;
+}
+
+/* Quita la línea inferior de la última fila */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ================================
+   SECCIONES DESTACADAS
+   ================================ */
+
+/* Caja para resaltar información importante */
+.section-box {
+    background-color: #0B3D91;
+    border-left: 6px solid #FFD200;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Texto dentro de la caja */
+.section-box p,
+.section-box li {
+    color: #e2e8f0;
+}
+
+
+/* ================================
+   BLOQUES DE CÓDIGO
+   ================================ */
+
+pre {
+    background-color: #040709;
+    border-left: 4px solid #38bdf8;
+    border-radius: 6px;
+    padding: 14px;
+    color: #7dd3fc;
+
+    /* fuente típica para mostrar código */
+    font-family: 'Courier New', monospace;
+
+    /* permite scroll horizontal si el código es largo */
+    overflow-x: auto;
+}
+
+
+/* ================================
+   FORMULARIOS
+   ================================ */
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #94a3b8;
+    font-size: 0.88em;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #1e3a5f;
+    background-color: #040709;
+    color: #e2e8f0;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Efecto cuando el usuario selecciona el campo */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+}
+
+
+/* ================================
+   BOTONES
+   ================================ */
+
+button {
+    margin-top: 12px;
+    padding: 8px 18px;
+
+    background-color: #0B3D91;
+    color: #FFD200;
+
+    border: 1px solid #FFD200;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+
+    transition: background-color 0.2s;
+}
+
+/* Efecto cuando el mouse pasa encima */
+button:hover {
+    background-color: #072F6B;
+}
+
+
+/* ================================
+   MENSAJES DEL SISTEMA
+   ================================ */
+
+#info {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #94a3b8;
+    min-height: 20px;
+}
+
+/* Mensaje correcto */
+#info.ok  { color: #34d399; }
+
+/* Mensaje de error */
+#info.err { color: #f87171; }
+
+
+/* ================================
+   SANDBOX DE PRUEBA
+   ================================ */
+
+#out {
+    background-color: #040709;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 12px;
+    min-height: 40px;
+    color: #e2e8f0;
+}
+
+/* iframe donde se ejecutan pruebas */
+#sandbox-frame {
+    width: 100%;
+    height: 220px;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    background-color: #040709;
+    margin-top: 10px;
+}
+
+/* contenedor flexible para botones */
+.flex-gap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+/* ================================
+   NAVEGACIÓN ENTRE PÁGINAS
+   ================================ */
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1e293b;
+}
+
+/* Botones para ir a la página anterior o siguiente */
+.btn-nav {
+    color: #FFD200;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.88em;
+
+    padding: 6px 14px;
+    border: 1px solid #FFD200;
+    border-radius: 6px;
+
+    background-color: #0A357A;
+
+    transition: background-color 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: #072F6B;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* ================================
+   SECCIÓN HERO Y TARJETAS
+   ================================ */
+
+/* Caja principal de bienvenida */
+.hero-content {
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    background-color: #0B3D91;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    margin: 0 0 8px;
+    font-size: 1.8em;
+}
+
+.hero-content .hero-subtitle {
+    color: #94a3b8;
+    margin: 0 0 6px;
+}
+
+.hero-content .hero-course {
+    color: #FFD200;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Grid de tarjetas de temas */
+.cards-grid {
+    display: grid;
+
+    /* tres columnas en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+/* Enlace que envuelve cada tarjeta */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Tarjeta de contenido */
+.topic-card {
+    background-color: #0e1521;
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 18px;
+
+    transition: border-color 0.2s, transform 0.2s;
+
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* efecto cuando se pasa el mouse */
+.topic-card:hover {
+    border-color: #FFD200;
+    transform: translateY(-3px);
+}
+
+/* número pequeño de la tarjeta */
+.card-num {
+    font-size: 0.72em;
+    color: #64748b;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* título de la tarjeta */
+.topic-card h3 {
+    color: #a78bfa;
+    margin: 0 0 6px;
+    font-size: 1em;
+    border-bottom: none;
+}
+
+/* texto de la tarjeta */
+.topic-card p {
+    font-size: 0.85em;
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* fila de dos tarjetas */
+.cards-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+
+
+/* ================================
+   ENLACES GENERALES
+   ================================ */
+
+a {
+    color: #38bdf8;
+}
+
+a:hover {
+    color: #FFD200;
+}
+
+
+/* ================================
+   PIE DE PÁGINA
+   ================================ */
+
+footer {
+    background-color: #072F6B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
+/* ================================
+   DISEÑO RESPONSIVE
+   ================================ */
+
+/* Ajustes para tablets o pantallas medianas */
+@media (max-width: 780px) {
+
+    /* aparece el botón hamburguesa */
+    .hamburger { display: flex; }
+
+    /* el menú normal se oculta */
+    nav {
+        display: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* cuando el JS agrega la clase open
+       el menú vuelve a mostrarse */
+    nav.open {
+        display: block;
+    }
+
+    /* enlaces del menú en formato vertical */
+    nav a {
+        display: block;
+        padding: 10px 24px;
+        margin: 0;
+        border-bottom: 1px solid #0B3D91;
+    }
+
+    /* grid pasa de 3 columnas a 2 */
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* fila secundaria pasa a una columna */
+    .cards-row-2 { grid-template-columns: 1fr; }
+}
+
+/* Ajustes para celulares pequeños */
+@media (max-width: 480px) {
+
+    /* las tarjetas se muestran en una sola columna */
+    .cards-grid { grid-template-columns: 1fr; }
+
+}

@@ -1,0 +1,167 @@
+/* ================================
+   login.css — Proyecto Meta
+   Aquí van los estilos solo para
+   la pantalla de inicio de sesión.
+   Básicamente define cómo se ve
+   el login y algunos mensajes.
+   ================================ */
+
+/* Caja principal donde va todo
+   el formulario del login */
+.login-box {
+    /* Limito el ancho para que no se
+       haga gigante en pantallas grandes */
+    max-width: 420px;
+
+    /* Lo centro en la página y le
+       doy espacio arriba y abajo */
+    margin: 48px auto;
+
+    /* Color de fondo del cuadro */
+    background-color: #0B3D91;
+
+    /* Borde amarillo para que destaque */
+    border: 1px solid #FFD200;
+
+    /* Bordes redondeados para que
+       se vea más moderno */
+    border-radius: 10px;
+
+    /* Espacio interno para que
+       el contenido no quede pegado */
+    padding: 32px 28px;
+}
+
+/* Ajusto el título del login */
+.login-box h2 {
+    /* Quito el margen de arriba porque
+       el navegador lo agrega por defecto */
+    margin-top: 0;
+}
+
+/* Estilo del botón de iniciar sesión */
+.login-box button {
+    /* El botón ocupa todo el ancho */
+    width: 100%;
+
+    /* Espacio entre el botón y
+       los campos del formulario */
+    margin-top: 16px;
+
+    /* Tamaño interno del botón */
+    padding: 10px;
+
+    /* Tamaño normal del texto */
+    font-size: 1em;
+}
+
+/* Sección donde muestro las
+   credenciales de prueba */
+.login-hint {
+    /* Un poco de espacio arriba */
+    margin-top: 20px;
+
+    /* Texto un poco más pequeño
+       porque es solo información */
+    font-size: 0.85em;
+}
+
+/* Estilo para resaltar los datos
+   dentro de <code> */
+.login-hint code {
+    /* Fondo azul oscuro */
+    background-color: #072F6B;
+
+    /* Texto amarillo para que resalte */
+    color: #FFD200;
+
+    /* Espacio pequeño alrededor
+       del texto */
+    padding: 1px 6px;
+
+    /* Bordes redondeados */
+    border-radius: 4px;
+}
+
+/* Zona donde aparecen mensajes
+   cuando el usuario intenta iniciar sesión */
+#login-info {
+    /* Espacio arriba del mensaje */
+    margin-top: 10px;
+
+    /* Texto pequeño */
+    font-size: 0.85em;
+
+    /* Dejo un espacio mínimo para
+       que la página no "salte"
+       cuando aparece el mensaje */
+    min-height: 20px;
+}
+
+/* Color cuando el login fue correcto */
+#login-info.ok  { color: #34d399; }
+
+/* Color cuando hubo un error */
+#login-info.err { color: #f87171; }
+
+/* Barra que aparece en el header
+   cuando el usuario ya inició sesión */
+.session-bar {
+
+    /* Uso flex para acomodar
+       el icono, el correo y el botón */
+    display: flex;
+
+    /* Centra todo verticalmente */
+    align-items: center;
+
+    /* Espacio entre cada elemento */
+    gap: 10px;
+
+    /* Texto pequeño */
+    font-size: 0.8em;
+
+    /* Color amarillo del texto */
+    color: #FFD200;
+}
+
+/* Color del texto dentro de la barra */
+.session-bar span {
+    color: #e2e8f0;
+}
+
+/* Botón para cerrar sesión */
+.btn-logout {
+
+    /* Sin fondo para que se vea simple */
+    background: none;
+
+    /* Borde rojo para indicar acción importante */
+    border: 1px solid #f87171;
+
+    /* Texto rojo */
+    color: #f87171;
+
+    /* Tamaño interno del botón */
+    padding: 4px 10px;
+
+    /* Bordes redondeados */
+    border-radius: 6px;
+
+    /* Texto pequeño */
+    font-size: 0.8em;
+
+    /* Cursor de mano cuando paso el mouse */
+    cursor: pointer;
+
+    /* Quito el margen superior */
+    margin-top: 0;
+}
+
+/* Cuando paso el mouse sobre el botón */
+.btn-logout:hover {
+
+    /* Se muestra un fondo rojo suave
+       para indicar que se puede hacer click */
+    background-color: rgba(248, 113, 113, 0.15);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio — Proyecto Meta TI</title>
+    <meta name="description" content="Demo educativo sobre fundamentos de Internet, diseño web y seguridad para estudiantes de TI.">
+    <!-- CSS compartidos -->
+    <link rel="stylesheet" href="../compartido/css/base.css">
+    <link rel="stylesheet" href="../compartido/css/header.css">
+    <link rel="stylesheet" href="../compartido/css/footer.css">
+    <link rel="stylesheet" href="../compartido/css/responsive.css">
+    <!-- CSS de este módulo -->
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">&lt;/&gt;</div>
+        <div>
+            <h1>Proyecto<span>Meta</span></h1>
+            <p>ITI-421 Web I — Público Meta TI</p>
+        </div>
+    </div>
+    <button id="btnMenu" class="hamburger" aria-expanded="false" aria-label="Abrir menú">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+    </button>
+</header>
+
+<nav>
+    <a href="../auth/login.html">Inicio sesión</a>
+    <a href="../inicio/inicio.html" class="active">Inicio</a>
+    <a href="../fundamentos/fundamentos.html">Fundamentos</a>
+    <a href="../diseno/diseno.html">Diseño</a>
+    <a href="../seguridad/seguridad.html">Seguridad</a>
+    <a href="../talleres/talleres.html">Talleres</a>
+    <a href="../sandbox/sandbox.html">Sandbox</a>
+</nav>
+
+<main>
+
+    <div class="hero-content">
+        <h1>&lt;Proyecto Mera /&gt;</h1>
+        <p class="hero-subtitle">Recursos y demos para estudiantes de Ingeniería &amp; TI</p>
+        <p class="hero-course">ITI-421 &nbsp; Web I &nbsp; Público Meta TI</p>
+    </div>
+
+    <div class="cards-grid">
+        <a href="../fundamentos/fundamentos.html" class="card-link">
+            <div class="topic-card">
+                <span class="card-num">01</span>
+                <h3>Fundamentos</h3>
+                <p>Público meta, protocolos e infraestructura.</p>
+            </div>
+        </a>
+        <a href="../diseno/diseno.html" class="card-link">
+            <div class="topic-card">
+                <span class="card-num">02</span>
+                <h3>Diseño Web</h3>
+                <p>UI/UX, estructura y herramientas modernas.</p>
+            </div>
+        </a>
+        <a href="../seguridad/seguridad.html" class="card-link">
+            <div class="topic-card">
+                <span class="card-num">03</span>
+                <h3>Seguridad</h3>
+                <p>SSL, autenticación y vulnerabilidades.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="cards-row-2">
+        <a href="../talleres/talleres.html" class="card-link">
+            <div class="topic-card">
+                <span class="card-num">04</span>
+                <h3>Talleres</h3>
+                <p>Ejercicios prácticos guiados.</p>
+            </div>
+        </a>
+        <a href="../sandbox/sandbox.html" class="card-link">
+            <div class="topic-card">
+                <span class="card-num">05</span>
+                <h3>Sandbox</h3>
+                <p>Demo en vivo de XSS seguro vs. inseguro.</p>
+            </div>
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; <span class="year"></span> — Demo educativo para estudiantes de Ingeniería en TI</p>
+</footer>
+
+<!-- JS compartidos -->
+<script src="../compartido/js/menu.js" defer></script>
+<script src="../compartido/js/footer-year.js" defer></script>
+<!-- JS de auth (protección de sesión) -->
+<script src="../auth/login.js" defer></script>
+
+</body>
+</html>

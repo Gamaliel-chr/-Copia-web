@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión — Proyecto Meta TI</title>
+    <!-- CSS compartidos -->
+    <link rel="stylesheet" href="../compartido/css/base.css">
+    <link rel="stylesheet" href="../compartido/css/header.css">
+    <link rel="stylesheet" href="../compartido/css/footer.css">
+    <link rel="stylesheet" href="../compartido/css/responsive.css">
+    <!-- CSS de este módulo -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">&lt;/&gt;</div>
+        <div>
+            <h1>Proyecto<span>Meta</span></h1>
+            <p>ITI-421 Web I — Público Meta TI</p>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="login-box">
+
+        <h2>Iniciar sesión</h2>
+        <p>Ingresa tus credenciales institucionales para acceder al sitio.</p>
+
+        <label for="login-email">Correo institucional</label>
+        <input type="email" id="login-email" placeholder="usuario@est.utn.ac.cr">
+
+        <label for="login-pw">Contraseña</label>
+        <input type="password" id="login-pw" placeholder="Contraseña">
+
+        <button type="button" id="btnLogin">Entrar</button>
+
+        <p id="login-info"></p>
+
+        <div class="login-hint section-box">
+            <b>Credenciales de demo:</b>
+            <ul>
+                <li>Correo: <code>wagner@est.utn.ac.cr</code></li>
+                <li>Contraseña: <code>Gramo1234!</code></li>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; <span class="year"></span> — Demo educativo para estudiantes de Ingeniería en TI</p>
+</footer>
+
+<!-- JS compartidos -->
+<script src="../compartido/js/footer-year.js" defer></script>
+<!-- JS de este módulo -->
+<script src="login.js" defer></script>
+
+</body>
+</html>
